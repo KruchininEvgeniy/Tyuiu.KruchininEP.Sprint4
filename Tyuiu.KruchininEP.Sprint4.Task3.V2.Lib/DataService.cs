@@ -1,20 +1,18 @@
-﻿namespace Tyuiu.KruchininEP.Sprint4.Task3.V2.Lib
+﻿using tyuiu.cources.programming.interfaces.Sprint4;
+namespace Tyuiu.KruchininEP.Sprint4.Task3.V2.Lib;
+
+public class DataService : ISprint4Task3V2
 {
-    public class DataService
+    public int Calculate(int[,] array)
     {
-        public int GetMaxInFirstRow(int[,] array)
+        int max = array[0, 0];
+        for (int j = 0; j < 5; j++)
         {
-            int max = array[0, 0];
-
-            for (int i = 1; i < array.GetLength(1); i++)
+            if (array[0, j] > max)
             {
-                if (array[0, i] > max)
-                {
-                    max = array[0, i];
-                }
+                max = array[0, j];
             }
-
-            return max;
         }
+        return max;
     }
 }
