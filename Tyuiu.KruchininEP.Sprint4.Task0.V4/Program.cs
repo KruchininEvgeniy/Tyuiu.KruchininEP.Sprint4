@@ -1,39 +1,33 @@
-﻿using System;
-using Tyuiu.KruchininEP.Sprint4.Task0.V4.Lib;
+﻿using Tyuiu.KruchininEP.Sprint4.Task0.V4.Lib;
 
-namespace Tyuiu.KruchininEP.Sprint4.Task0.V4
+namespace Tyuiu.OvsepyanAA.Sprint4.Task0.V4
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            DataService ds = new DataService();
-
-            int[] array = { 5, 3, 7, 1, 3, 9, 8, 7, 9, 4 };
-
+            DataService ds = new();
             Console.Title = "Спринт #4 | Выполнил: Кручинин Е. П. | РППб25-1";
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* Спринт #4                                                               *");
-            Console.WriteLine("* Тема: Одномерные массивы (статический ввод)                             *");
-            Console.WriteLine("* Задание #0                                                              *");
-            Console.WriteLine("* Вариант #4                                                              *");
-            Console.WriteLine("* Выполнил: Кручинин Е. П. | РППб25-1                                     *");
+            Console.WriteLine("* Спринт #4                                                                ");
+            Console.WriteLine("* Тема: Одномерные массивы (статический ввод)                              ");
+            Console.WriteLine("* Задание #0                                                               ");
+            Console.WriteLine("* Вариант #2                                                               ");
+            Console.WriteLine("* Выполнил: Кручинин Е. П. | РППб25-1                                      ");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Дан массив из 10 элементов в диапазоне от 0 до 9.                       *");
-            Console.WriteLine("* Найти произведение чётных элементов массива.                            *");
+            Console.WriteLine("* УСЛОВИЕ:                                                                 ");
+            Console.WriteLine("* Дан одномерный целочисленный массив на 10 элементов заполненный          ");
+            Console.WriteLine("* статическими значениями в диапазоне от 0 до 9 подсчитать произведение    ");
+            Console.WriteLine("* четных элементов массива.  {5 ,3 ,7 ,1 ,3 ,9 ,8 ,7 ,9 ,4}                ");
             Console.WriteLine("***************************************************************************");
-
-            Console.WriteLine("\nИсходный массив:");
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + " ");
-            }
-
-            int result = ds.GetMultEvenArrEl(array);
-
-            Console.WriteLine($"\n\nПроизведение чётных элементов массива = {result}");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         ");
             Console.WriteLine("***************************************************************************");
+            Console.WriteLine("*                                                                          ");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                               ");
+            Console.WriteLine("***************************************************************************");
+            int[] array = new int[] { 5, 3, 7, 1, 3, 9, 8, 7, 9, 4 };
+            Console.WriteLine(ds.GetMultEvenArrEl(array));
             Console.ReadKey();
         }
     }

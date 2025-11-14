@@ -1,20 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tyuiu.KruchininEP.Sprint4.Task0.V4.Lib;
+﻿using Tyuiu.KruchininEP.Sprint4.Task0.V4.Lib;
 
-namespace Tyuiu.VikolAS.Sprint4.Task0.V4.Test
+namespace Tyuiu.OvsepyanAA.Sprint4.Task0.V4.Test
 {
     [TestClass]
-    public sealed class DataServiceTest
+    public class DataServiceTest
     {
         [TestMethod]
         public void TestMethod1()
         {
-            DataService ds = new DataService();
-            int[] array = { 5, 3, 7, 1, 3, 9, 8, 7, 9, 4 };
+            DataService service = new();
+            int[] array = new int[] { 5, 3, 7, 1, 3, 9, 8, 7, 9, 4 };
+            Assert.AreEqual(32, service.GetMultEvenArrEl(array));
 
-            int res = ds.GetMultEvenArrEl(array);
-
-            Assert.AreEqual(32, res); // 8 * 4 = 32
         }
     }
 }
