@@ -1,18 +1,27 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint4;
-namespace Tyuiu.KruchininEP.Sprint4.Task3.V2.Lib;
-
-public class DataService : ISprint4Task3V2
+namespace Tyuiu.KruchininEP.Sprint4.Task3.V27.Lib
 {
-    public int Calculate(int[,] array)
+    public class DataService : ISprint4Task3V27
     {
-        int max = array[0, 0];
-        for (int j = 0; j < 5; j++)
+        public int Calculate(int[,] array)
         {
-            if (array[0, j] > max)
+
+            int rows = 5;
+            int colums = 5;
+
+            int count = 0;
+
+            for (int i = 0; i < rows; i++)
             {
-                max = array[0, j];
+                for (int j = 0; j < colums; j++)
+                {
+                    if (array[i, j] % 2 == 0)
+                    {
+                        count++;
+                    }
+                }
             }
+            return count;
         }
-        return max;
     }
 }
