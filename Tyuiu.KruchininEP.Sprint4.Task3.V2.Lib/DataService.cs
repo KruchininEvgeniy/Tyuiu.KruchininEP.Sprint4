@@ -1,27 +1,26 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint4;
+
 namespace Tyuiu.KruchininEP.Sprint4.Task3.V2.Lib
 {
     public class DataService : ISprint4Task3V2
     {
         public int Calculate(int[,] array)
         {
+            int rows = array.GetLength(0);
+            int cols = array.GetLength(1);
 
-            int rows = 5;
-            int colums = 5;
-
-            int count = 0;
-
+            int summ = 0;
             for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < colums; j++)
+                for (int j = 0; j < cols; j++)
                 {
-                    if (array[i, j] % 2 == 0)
+                    if (j == 1)
                     {
-                        count++;
+                        summ += array[i, j];
                     }
                 }
             }
-            return count;
+            return summ;
         }
     }
 }
