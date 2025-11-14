@@ -37,8 +37,8 @@ namespace Tyuiu.KruchininEP.Sprint4.Task7.V21
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 3; j++)
-                {
-                    mtrx[i, j] = int.Parse(str.Substring(i * 3 + j, 1));
+                {   
+                    mtrx[i, j] = int.Parse(str.Substring(i * columns + j, 1));
                     Console.Write("   " + mtrx[i, j]);
                 }
                 Console.WriteLine();
@@ -51,9 +51,6 @@ namespace Tyuiu.KruchininEP.Sprint4.Task7.V21
             Console.WriteLine("***************************************************************************");
 
             int res = ds.Calculate(rows, columns, str);
-
-
-
             Console.WriteLine("Сумма четных чисел = " + res);
 
             Console.ReadKey();
