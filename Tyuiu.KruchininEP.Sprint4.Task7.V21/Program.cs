@@ -23,19 +23,23 @@ namespace Tyuiu.KruchininEP.Sprint4.Task7.V21
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            string value = "425963128528";
+            int rows = 4;
+            int columns = 3;
+            int[,] mtrx = new int[rows, columns];
+
+            string str = "425963128528";
+
+            DataService ds = new DataService();
 
             Console.WriteLine("Матрица");
             Console.WriteLine();
-
-            int[,] matrix = new int[4, 3];
 
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    matrix[i, j] = int.Parse(value.Substring(i * 3 + j, 1));
-                    Console.Write("   " + matrix[i, j]);
+                    mtrx[i, j] = int.Parse(str.Substring(i * 3 + j, 1));
+                    Console.Write("   " + mtrx[i, j]);
                 }
                 Console.WriteLine();
             }
@@ -46,8 +50,7 @@ namespace Tyuiu.KruchininEP.Sprint4.Task7.V21
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            DataService ds = new DataService();
-            int res = ds.Calculate(4, 3, value);
+            int res = ds.Calculate(rows, columns, str);
 
 
 

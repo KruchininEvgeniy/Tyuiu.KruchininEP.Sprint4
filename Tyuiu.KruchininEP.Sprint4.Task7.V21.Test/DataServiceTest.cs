@@ -6,12 +6,16 @@ namespace Tyuiu.KruchininEP.Sprint4.Task7.V21.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalculate()
         {
             DataService ds = new DataService();
-            string ms = "123456789333";
-            int res = ds.Calculate(4, 3, ms);
-            Assert.AreEqual(20, res);
+            int rows = 4;
+            int columns = 3;
+
+            string str = "425963128528";
+            int res = ds.Calculate(rows, columns, str);
+            int wait = 32;
+            Assert.AreEqual(wait, res);
         }
     }
 }
