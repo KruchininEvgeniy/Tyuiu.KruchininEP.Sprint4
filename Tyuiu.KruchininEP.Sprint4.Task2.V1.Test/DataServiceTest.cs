@@ -1,22 +1,18 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-
-using Tyuiu.KruchininEP.Sprint4.Task2.V11.Lib;
-
-namespace Tyuiu.KruchininEP.Sprint4.Task2.V11.Test
+﻿using Tyuiu.KruchininEP.Sprint4.Task2.V1.Lib;
+namespace Tyuiu.KruchininEP.Sprint4.Task2.V1.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidCalculate()
+        public void TestMethod1()
         {
             DataService ds = new DataService();
 
-            int[] numsArray = { 8, 1, 4, 4, 1, 2, 3, 5, 1, 5, 8, 1, 4, 4, 1 };
-            int res = ds.Calculate(numsArray);
-
-            Assert.AreEqual(34, res);
+            int[] array = { 2, 5, 3, 8, 2, 6, 2, 5, 5, 7, 4 };
+            int wait = 1536;
+            int res = ds.Calculate(array);
+            Assert.AreEqual(wait, res);
         }
     }
 }
