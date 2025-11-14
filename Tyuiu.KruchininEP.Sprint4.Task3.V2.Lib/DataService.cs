@@ -8,19 +8,18 @@ namespace Tyuiu.KruchininEP.Sprint4.Task3.V2.Lib
         {
             int rows = array.GetLength(0);
             int cols = array.GetLength(1);
-
-            int summ = 0;
+            int max = 0;
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    if (j == 1)
+                    if (array[i,j] > max)
                     {
-                        summ += array[i, j];
+                        max = array[i, j];
                     }
                 }
             }
-            return summ;
+            return max;
         }
     }
 }
